@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+<head>
+
+	<title>Details of ABC students</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/abcapp/display.css" %}">
+
+</head>
+<body>
+	<h1>Details of ABC Students</h1>
+	{% if abc_data %}
+		<table border="10">
+			<tr>
+				<th>ABC ID</th>
+				<th>Name</th>
+				<th>College Name</th>
+				<th>Branch</th>
+				<th>Date of Birth</th>
+				<th>Year of pass</th>
+				<th>Percentage</th>
+				<th>Phone Number</th>
+				<th>Mail id</th>
+
+				{% for d in abc_data  %}
+				<tr>
+					<td>{{ d.abcid }}</td>
+					<td>{{ d.name }}</td>
+					<td>{{ d.college }}</td>
+					<td>{{ d.branch }}</td>
+					<td>{{ d.date_of_birth }}</td>
+					<td>{{ d.year_of_pass }}</td>
+					<td>{{ d.percentage }}</td>
+					<td>{{ d.phone_number }}</td>
+					<td>{{ d.mail_id }}</td>
+				</tr>
+
+				{% endfor %}	
+			
+			</tr>	
+		</table>
+
+		
+	{% else %}
+		<h1>No data to diplay</h1>
+		
+	{% endif %}
+</body>
+</html>

@@ -1,0 +1,16 @@
+#c1{
+	color:white;
+	background-color: red;
+	font-size: 40px;
+}
+
+#c2{
+	color: white;
+	background-color: orange;
+	font-size: 30px;
+}
+
+img{
+	max-width: 400px;
+	max-height: 400px; 
+}

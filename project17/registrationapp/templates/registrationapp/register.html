@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<title>registration page</title>
+	<link rel="stylesheet" type="text/css" href="{% static "css/registrationapp/homepage.css" %}">
+</head>
+<body>
+	<div class="container" align="center">
+		<form method="POST">
+
+			<h1>Student Registration form</h1>
+			<h2>Please provide the following data</h2>
+
+			{{ form.as_p }}
+			{% csrf_token %}
+
+
+			<input type="submit" name="Register">
+
+		</form>
+
+	</div>
+</body>
+</html>
